@@ -66,7 +66,7 @@ function SlideReveal({ children, className, direction = "up", delay = 0, sequenc
 function ViewportReveal({ children, className, direction = "up", delay = 0 }: RevealProps) {
   const prefersReducedMotion = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
+  const isInView = useInView(ref, { once: false, margin: "-10% 0px" });
   const offset = getOffset(direction);
 
   if (prefersReducedMotion || direction === "none") {
@@ -78,7 +78,7 @@ function ViewportReveal({ children, className, direction = "up", delay = 0 }: Re
       ref={ref}
       className={className}
       initial={{ opacity: 0, x: offset.x ?? 0, y: offset.y ?? 0 }}
-      animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
+      animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: offset.x ?? 0, y: offset.y ?? 0 }}
       transition={{ duration: 0.72, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}

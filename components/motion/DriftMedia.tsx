@@ -56,7 +56,7 @@ function SlideDriftMedia({ children, className, intensity = "medium", sequence =
 function ViewportDriftMedia({ children, className, intensity = "medium" }: DriftMediaProps) {
   const prefersReducedMotion = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-5% 0px" });
+  const isInView = useInView(ref, { once: false, margin: "-5% 0px" });
   const { yRange, scaleRange } = INTENSITY_MAP[intensity];
 
   if (prefersReducedMotion) {

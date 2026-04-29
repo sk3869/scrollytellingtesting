@@ -61,7 +61,7 @@ function SlideSceneCard({ children, className, variant = "section", delay = 0, s
 function ViewportSceneCard({ children, className, variant = "section", delay = 0 }: SceneCardProps) {
   const prefersReducedMotion = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-8% 0px" });
+  const isInView = useInView(ref, { once: false, margin: "-8% 0px" });
   const { yOffset, scaleStart } = VARIANT_MAP[variant];
 
   if (prefersReducedMotion) {
