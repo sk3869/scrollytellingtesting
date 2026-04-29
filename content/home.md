@@ -70,8 +70,6 @@ Tau is a protein that normally stabilizes the internal skeleton of neurons. In A
 
 ---
 
-![split](/images/genetics-dna.svg)
-
 ## Cause 03 — Genetic
 
 # Genetics & the APOE-ε4 Gene
@@ -103,8 +101,6 @@ Age is the single greatest known risk factor for Alzheimer's. The risk roughly *
 ```
 
 ---
-
-![split-reverse](/images/heart-brain.svg)
 
 ## Cause 05 — Vascular
 
@@ -148,8 +144,6 @@ The brain's immune cells — microglia — normally clear debris and protect neu
 > "Neuroinflammation is not just a side effect — it is a co-driver of neurodegeneration."
 
 ---
-
-![split](/images/sleep-brain.svg)
 
 ## Cause 08 — Lifestyle
 

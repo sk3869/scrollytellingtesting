@@ -25,8 +25,10 @@ export function PresentationSlide({
     offset: ['start start', 'end start'],
   });
 
-  const contextValue =
-    index === 0 ? { scrollYProgress: null } : { scrollYProgress };
+  // Always null — content components use IntersectionObserver-based
+  // viewport animations, which fire reliably as each slide pins.
+  // ParallaxBackground has its own useScroll and doesn't need the context.
+  const contextValue = { scrollYProgress: null };
 
   return (
     <SlideContext.Provider value={contextValue}>

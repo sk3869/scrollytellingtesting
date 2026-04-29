@@ -80,11 +80,11 @@ const StandardLayoutBlock = ({
     >
       <SceneCard variant="section" sequence="standard">
         <div
-          className={`${textWrapperClass} ${
+          className={
             hasBackground
-              ? "presentation-background-panel"
-              : "presentation-standard-panel"
-          }`.trim()}
+              ? `${textWrapperClass} presentation-background-panel`.trim()
+              : "glass-panel presentation-standard-panel"
+          }
         >
           <MarkdownRenderer source={slide.cleanContent} layout="presentation" />
         </div>

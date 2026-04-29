@@ -132,21 +132,23 @@ body {
    Glass Panels
    ---------------------------------------------------------- */
 .glass-panel {
-  background: var(--cream-92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--ink-22);
+  background: rgba(255, 253, 249, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(31, 26, 22, 0.10);
   border-radius: var(--radius-lg);
   padding: var(--sp-5) var(--sp-6);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 4px 32px rgba(31, 26, 22, 0.10), 0 1px 4px rgba(31, 26, 22, 0.06);
   max-width: 840px;
   width: 100%;
+  color: var(--color-ink);
 }
 
 .glass-panel--dark {
-  background: rgba(18, 12, 8, 0.78);
-  border-color: var(--cream-22);
+  background: rgba(14, 9, 5, 0.82);
+  border-color: rgba(245, 241, 234, 0.15);
   color: var(--color-paper);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.30);
 }
 
 /* ----------------------------------------------------------
@@ -261,7 +263,13 @@ body {
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.025em;
-  color: inherit;
+  color: var(--color-ink);
+  margin-bottom: var(--sp-3);
+}
+
+.glass-panel--dark .heading--1,
+.theme-dark .heading--1 {
+  color: var(--color-paper);
 }
 
 .heading--2 {
@@ -283,8 +291,13 @@ body {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: inherit;
+  color: var(--color-ink);
   margin-bottom: var(--sp-3);
+}
+
+.glass-panel--dark .heading--3,
+.theme-dark .heading--3 {
+  color: var(--color-paper);
 }
 
 .heading--4 {
@@ -328,8 +341,9 @@ body {
 
 .theme-dark .text-body,
 .glass-panel--dark .text-body {
-  color: rgba(245, 241, 234, 0.88);
+  color: rgba(245, 241, 234, 0.90);
 }
+
 
 /* Presentation layout body */
 .presentation-standard-panel .text-body,
