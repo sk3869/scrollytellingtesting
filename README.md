@@ -1,22 +1,21 @@
 # Alzheimer's Disease: Understanding the Causes
 
-A scrollytelling presentation on the ten known causes of Alzheimer's disease, built with Next.js and Framer Motion.
+A scrollytelling web presentation on the ten known causes of Alzheimer's disease, built with Next.js and Framer Motion for an AI pair-programming course assignment.
 
-**Live site:** https://sk3869.github.io/scrollytellingtesting/
-**Author:** Sriram Kanala
+**Live site:** https://sk3869.github.io/scrollytellingtesting/  
+**Author:** Sriram Kanala  
+**Course:** Spec-driven AI pair-programming assignment
 
 ---
 
-## Setup
+## Quick start
 
 ```bash
 npm install
 npm run dev        # localhost:3000
 npm run build      # static export → /out
 npm run lint       # ESLint
-npm run typecheck  # tsc --noEmit
 npm run test       # Vitest unit tests
-npm run test:e2e   # Playwright e2e
 ```
 
 ---
@@ -38,76 +37,50 @@ npm run test:e2e   # Playwright e2e
 
 ## Deployment
 
-**One-time setup:**
 1. Fork this repo
 2. Go to **Settings → Pages → Source → GitHub Actions**
-3. Push any commit to `main` — when the Actions tab goes green, the site is live at `https://<user>.github.io/<repo>/`
-
-The workflow sets `NEXT_PUBLIC_BASE_PATH` to the repo name automatically.
+3. Push any commit to `main` — site goes live at `https://<user>.github.io/<repo>/`
 
 ---
 
 ## Project structure
 
 ```
-.github/workflows/deploy.yml   ← CI/CD pipeline
-app/
-  page.tsx                     ← homepage (loads content/home.md)
-  [...slug]/page.tsx            ← depth pages (content/pages/*.md)
-  images/page.tsx               ← auto-gallery of public/images/
-  globals.css                   ← design system tokens + layout
-  layout.tsx                    ← root layout + fonts
-components/
-  layouts/                      ← PageLayoutFactory · PresentationLayout · StandardLayout
-  markdown/                     ← MarkdownRenderer (cta · stat-grid · source-line)
-  motion/                       ← Reveal · DriftMedia · SceneCard · ParallaxBackground
-                                   PresentationSlide · PresentationProgress
-                                   PresentationShortcuts · PresentationFooterGate
-  ui/                           ← Heading · Text · CallToActionGroup · SourceLine
-  visualization/                ← StatGrid
-  site-header.tsx · site-footer.tsx · page-shell.tsx
-content/
-  home.md                       ← 13 Alzheimer's slides
-  pages/resources.md            ← /resources depth page
-docs/
-  specs/                        ← what to build (one file per concern)
-  phases/                       ← when and how (execution plans with exit checks)
-lib/
-  content/                      ← schema · repository · parser · depth-page
-  site-config.ts · sources.ts · stakeholder-paths.ts · image-credits.ts
-public/images/                  ← drop images here; auto-listed at /images/
-tests/unit/                     ← Vitest tests (mirrors source paths)
-eslint.config.mjs
-next.config.ts
-PROCESS.md
+.github/workflows/   ← CI/CD deploy pipeline
+app/                 ← Next.js App Router pages + global CSS
+components/          ← layouts · motion · ui · markdown · visualization
+content/             ← Markdown slides (home.md) + depth pages
+docs/                ← specs · phases · guide
+lib/                 ← content pipeline · site config · sources
+public/images/       ← image assets (auto-listed at /images/)
+tests/unit/          ← Vitest unit tests
 ```
 
 ---
 
-## Adding content
+## Bibliography
 
-**New slide** — edit `content/home.md`, separate slides with `---`. Image directives:
-```markdown
-![bg](/images/file.jpg)             full-bleed cinematic background
-![split](/images/file.jpg)          right image, left text
-![split-reverse](/images/file.jpg)  left image, right text
-```
+### Content sources
 
-**Custom code blocks:**
-````markdown
-```cta
-[Label](/path)
-[External](https://example.com)
-```
-```stat-grid
-55M | People living with dementia
-10M | New cases per year
-```
-````
+Alzheimer's Association. (n.d.). *Alzheimer's disease facts and figures*. https://www.alz.org/alzheimers-dementia/facts-figures
 
-**New depth page** — create `content/pages/slug.md` with `layout: "standard"`. Live at `/slug/` automatically.
+World Health Organization. (2025, March 31). *Dementia*. https://www.who.int/news-room/fact-sheets/detail/dementia
 
-**Images** — drop into `public/images/`, reference as `/images/file.jpg`. Auto-listed at `/images/`.
+National Institute on Aging. (n.d.). *Alzheimer's and dementia*. https://www.nia.nih.gov/health/alzheimers-and-dementia
+
+National Institute on Aging. (2026, January 28). *Alzheimer's disease genetics fact sheet*. https://www.nia.nih.gov/health/alzheimers-causes-and-risk-factors/alzheimers-disease-genetics-fact-sheet
+
+### Image sources
+
+BrightFocus Foundation. (2026, March 24). *What are Alzheimer's plaques and tangles?* https://www.brightfocus.org/resource/what-are-alzheimers-plaques-and-tangles/
+
+MSc, D. M. (2026, March 26). *Your APOE type and Alzheimer's risk: How to find it, what it means, and what to do*. Genetic Lifehacks. https://www.geneticlifehacks.com/alzheimers-and-apoe-type/
+
+Ayala, R. (2025, November 8). *Alzheimer's disease: The basics*. Alzheimer's Los Angeles. https://www.alzheimersla.org/for-families/understanding-memory-loss/alzheimers-disease-the-basics/
+
+Cortes-Canteli, M., & Iadecola, C. (2020). Alzheimer's disease and vascular aging. *Journal of the American College of Cardiology, 75*(8), 942–951. https://doi.org/10.1016/j.jacc.2019.10.062
+
+---
 
 ---
 
