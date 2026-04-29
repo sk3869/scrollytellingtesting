@@ -23,7 +23,7 @@ Affecting **55 million people** worldwide, Alzheimer's is a progressive disorder
 
 ---
 
-![split](/images/healthy-vs-disease.jpg)
+![split](/images/healthy-vs-disease.jpg.png)
 
 ## Overview
 
@@ -42,7 +42,7 @@ Alzheimer's disease accounts for **60–80%** of all dementia cases. It is not a
 
 ---
 
-![split-reverse](/images/neurons-plaques.jpg)
+![split-reverse](/images/neurons-plaques.jpg.jpg)
 
 ## Cause 01 — Biological
 
@@ -59,7 +59,7 @@ Beta-amyloid is a protein fragment that normally gets cleared from the brain. In
 
 ---
 
-![split](/images/neuron-tangles.jpg)
+![split](/images/neuron-tangles.jpg.webp)
 
 ## Cause 02 — Biological
 
@@ -76,7 +76,7 @@ Tau is a protein that normally stabilizes the internal skeleton of neurons. In A
 
 ---
 
-![split-reverse](/images/apoe-genetics.jpg)
+![split-reverse](/images/apoe-genetics.jpg.png)
 
 ## Cause 03 — Genetic
 
@@ -110,7 +110,7 @@ Age is the single greatest known risk factor for Alzheimer's. The risk roughly *
 
 ---
 
-![split](/images/vascular-brain.jpg)
+![split](/images/vascular-brain.jpg.jpg)
 
 ## Cause 05 — Vascular
 
