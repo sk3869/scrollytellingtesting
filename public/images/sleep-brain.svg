@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <defs>
+    <radialGradient id="sleepBg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0a0a2e"/>
+      <stop offset="60%" stop-color="#060614"/>
+      <stop offset="100%" stop-color="#030308"/>
+    </radialGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b8d4f0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#b8d4f0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sleepGlow">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="starBlur">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="700" fill="url(#sleepBg)"/>
+
+  <!-- Moon glow -->
+  <ellipse cx="760" cy="160" rx="120" ry="120" fill="url(#moonGlow)" opacity="0.6"/>
+
+  <!-- Moon crescent -->
+  <circle cx="760" cy="160" r="60" fill="#1a2a4a" stroke="#b8d4f0" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="785" cy="148" r="50" fill="#0a0a2e"/>
+
+  <!-- Stars -->
+  <g fill="#b8d4f0" filter="url(#starBlur)">
+    <circle cx="180" cy="80" r="1.5" opacity="0.8"/>
+    <circle cx="320" cy="50" r="1" opacity="0.6"/>
+    <circle cx="480" cy="90" r="1.5" opacity="0.7"/>
+    <circle cx="580" cy="45" r="1" opacity="0.8"/>
+    <circle cx="650" cy="100" r="1.5" opacity="0.5"/>
+    <circle cx="880" cy="70" r="1.5" opacity="0.7"/>
+    <circle cx="920" cy="200" r="1" opacity="0.6"/>
+    <circle cx="100" cy="200" r="1" opacity="0.5"/>
+    <circle cx="850" cy="280" r="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- Brain outline -->
+  <path d="M 400 230 C 370 215 335 222 320 245 C 300 238 278 248 272 270 C 254 263 235 272 232 295 C 218 292 202 304 204 326 C 196 337 197 360 211 371 C 208 388 215 408 230 416 C 230 438 246 455 266 457 C 272 475 290 486 310 479 C 324 491 344 491 357 480 C 373 491 395 491 408 479 C 424 491 446 487 454 472 C 474 475 490 461 490 440 C 506 436 516 420 513 403 C 528 396 534 378 529 361 C 544 350 545 328 531 318 C 534 298 521 280 505 276 C 496 258 474 250 458 258 C 450 242 428 232 410 236 C 407 232 404 230 400 230 Z"
+        fill="none" stroke="#4a6fa5" stroke-width="2" stroke-opacity="0.65" filter="url(#sleepGlow)"/>
+
+  <!-- Glymphatic flow waves inside brain -->
+  <g stroke="#6ab0e0" stroke-opacity="0.4" stroke-width="1.5" fill="none" filter="url(#sleepGlow)">
+    <path d="M 280 340 C 300 330 320 350 340 335 C 360 320 380 340 400 330 C 420 320 440 338 460 328"/>
+    <path d="M 275 370 C 295 360 315 378 335 364 C 355 350 375 368 395 358 C 415 348 435 364 455 356"/>
+    <path d="M 280 400 C 305 390 325 408 350 396 C 375 384 395 400 420 390 C 440 382 458 394 472 386"/>
+  </g>
+
+  <!-- Zzz -->
+  <g fill="#b8d4f0" opacity="0.45" font-family="Georgia, serif" font-style="italic">
+    <text x="600" y="300" font-size="28">z</text>
+    <text x="632" y="268" font-size="20">z</text>
+    <text x="656" y="244" font-size="14">z</text>
+  </g>
+
+  <!-- Label -->
+  <text x="370" y="510" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#8ab8d8" opacity="0.5" letter-spacing="3">GLYMPHATIC CLEARANCE</text>
+</svg>

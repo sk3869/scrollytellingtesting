@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="hopeBg" cx="50%" cy="70%" r="80%">
+      <stop offset="0%" stop-color="#3d1f08"/>
+      <stop offset="45%" stop-color="#1a0c04"/>
+      <stop offset="100%" stop-color="#080402"/>
+    </radialGradient>
+    <radialGradient id="hopeGlow" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#c97840" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#c97840" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hopeBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="rayGlow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#hopeBg)"/>
+
+  <!-- Horizon glow -->
+  <ellipse cx="600" cy="800" rx="700" ry="300" fill="url(#hopeGlow)"/>
+
+  <!-- Light rays -->
+  <g stroke="#c97840" stroke-opacity="0.12" stroke-width="1" filter="url(#hopeBlur)">
+    <line x1="600" y1="800" x2="100" y2="0"/>
+    <line x1="600" y1="800" x2="200" y2="0"/>
+    <line x1="600" y1="800" x2="320" y2="0"/>
+    <line x1="600" y1="800" x2="440" y2="0"/>
+    <line x1="600" y1="800" x2="560" y2="0"/>
+    <line x1="600" y1="800" x2="640" y2="0"/>
+    <line x1="600" y1="800" x2="760" y2="0"/>
+    <line x1="600" y1="800" x2="880" y2="0"/>
+    <line x1="600" y1="800" x2="980" y2="0"/>
+    <line x1="600" y1="800" x2="1100" y2="0"/>
+  </g>
+
+  <!-- Brighter central rays -->
+  <g stroke="#e8c090" stroke-opacity="0.18" stroke-width="1.5" filter="url(#rayGlow)">
+    <line x1="600" y1="800" x2="480" y2="0"/>
+    <line x1="600" y1="800" x2="600" y2="0"/>
+    <line x1="600" y1="800" x2="720" y2="0"/>
+  </g>
+
+  <!-- Horizon line -->
+  <line x1="0" y1="680" x2="1200" y2="680" stroke="#c97840" stroke-opacity="0.25" stroke-width="1" filter="url(#hopeBlur)"/>
+
+  <!-- Brain silhouette (faint, large, centered) -->
+  <g transform="translate(350, 180) scale(1.0)" opacity="0.10">
+    <path d="M 250 160 C 220 140 180 148 165 172 C 145 163 118 174 113 198 C 95 190 74 201 73 226 C 58 223 40 237 43 260 C 35 272 36 298 52 308 C 48 327 57 350 74 358 C 73 382 91 401 114 402 C 120 422 140 434 162 426 C 174 439 196 440 210 427 C 226 439 250 440 265 426 C 282 439 306 435 315 419 C 337 423 355 407 355 386 C 373 381 382 364 377 345 C 394 336 396 312 381 300 C 385 278 370 258 353 253 C 343 233 319 224 301 233 C 292 215 268 206 248 215 C 244 207 242 162 250 160 Z"
+          fill="#e8b870" stroke="#e8b870" stroke-width="1"/>
+  </g>
+</svg>
