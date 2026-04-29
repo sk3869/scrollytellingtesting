@@ -33,7 +33,7 @@ const SplitLayoutBlock = ({
       >
         <div className="split-layout">
           <div className="split-layout__content">
-            <LayeredRevealGroup direction="up" sequence="delayed" stagger={0.1}>
+            <LayeredRevealGroup direction="up" sequence="standard" stagger={0.1}>
               <div className={textWrapperClass}>
                 <MarkdownRenderer source={slide.cleanContent} layout="presentation" />
               </div>
@@ -42,7 +42,7 @@ const SplitLayoutBlock = ({
           <div
             className={`split-layout__media gpu-accelerated ${isLogo ? "split-layout__media--logo" : ""}`}
           >
-            <DriftMedia intensity="medium" sequence="delayed" className="h-full">
+            <DriftMedia intensity="medium" sequence="standard" className="h-full">
               <img
                 src={mediaSrc}
                 alt=""
@@ -77,7 +77,7 @@ const StandardLayoutBlock = ({
           : "presentation-copy-frame--standard"
       }`}
     >
-      <SceneCard variant="section" sequence="delayed">
+      <SceneCard variant="section" sequence="standard">
         <div
           className={`${textWrapperClass} ${
             hasBackground
