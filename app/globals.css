@@ -326,8 +326,9 @@ body {
   margin-bottom: var(--sp-4);
 }
 
-.theme-dark .text-body {
-  color: rgba(245, 241, 234, 0.80);
+.theme-dark .text-body,
+.glass-panel--dark .text-body {
+  color: rgba(245, 241, 234, 0.88);
 }
 
 /* Presentation layout body */
@@ -361,8 +362,9 @@ body {
   position: relative;
 }
 
-.glass-panel--dark li {
-  color: rgba(245, 241, 234, 0.80);
+.glass-panel--dark li,
+.theme-dark li {
+  color: rgba(245, 241, 234, 0.88);
 }
 
 .presentation-standard-panel li::before,

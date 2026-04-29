@@ -80,9 +80,9 @@ const StandardLayoutBlock = ({
     >
       <SceneCard variant="section" sequence="standard">
         <div
-          className={`${textWrapperClass} glass-panel ${
+          className={`${textWrapperClass} ${
             hasBackground
-              ? "presentation-background-panel glass-panel--dark"
+              ? "presentation-background-panel"
               : "presentation-standard-panel"
           }`.trim()}
         >

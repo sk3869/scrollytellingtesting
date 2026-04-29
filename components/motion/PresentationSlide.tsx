@@ -22,7 +22,7 @@ export function PresentationSlide({
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start end', 'end end'],
+    offset: ['start start', 'end start'],
   });
 
   const contextValue =
