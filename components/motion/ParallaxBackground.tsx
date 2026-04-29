@@ -11,6 +11,7 @@ import {
   useVelocity,
 } from "framer-motion";
 import { useSlideContext } from "./SlideContext";
+import { resolveRoute } from "@/lib/site-config";
 
 interface ParallaxBackgroundProps {
   src: string;
@@ -98,7 +99,7 @@ export function ParallaxBackground({
           opacity: 1,
           transformOrigin: "center",
         }}
-        src={src}
+        src={resolveRoute(src)}
         alt={alt}
       />
       <motion.div

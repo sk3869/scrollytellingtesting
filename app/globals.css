@@ -258,7 +258,7 @@ body {
 
 .heading--1 {
   font-size: var(--slide-display-size);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.025em;
   color: inherit;
@@ -280,7 +280,7 @@ body {
 
 .heading--3 {
   font-size: var(--slide-heading-size);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: inherit;
@@ -319,9 +319,9 @@ body {
 .text-body {
   font-family: var(--font-sans, 'Public Sans', system-ui, sans-serif);
   font-size: var(--slide-body-size);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.75;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   max-width: 65ch;
   margin-bottom: var(--sp-4);
 }
@@ -354,9 +354,9 @@ body {
 .glass-panel li {
   font-family: var(--font-sans, 'Public Sans', system-ui, sans-serif);
   font-size: var(--slide-list-size);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.65;
-  color: var(--color-ink-muted);
+  color: var(--color-ink);
   padding-left: var(--sp-4);
   position: relative;
 }
@@ -523,8 +523,8 @@ body {
 .stat-grid__value {
   font-family: var(--font-display, 'Newsreader', Georgia, serif);
   font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
-  font-weight: 300;
-  color: var(--color-accent);
+  font-weight: 400;
+  color: var(--color-accent-dark);
   line-height: 1;
 }
 
@@ -535,8 +535,8 @@ body {
 .stat-grid__label {
   font-family: var(--font-sans, 'Public Sans', sans-serif);
   font-size: var(--text-sm);
-  font-weight: 400;
-  color: var(--color-ink-muted);
+  font-weight: 500;
+  color: var(--color-ink);
   line-height: 1.4;
 }
 

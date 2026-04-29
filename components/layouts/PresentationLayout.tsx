@@ -11,6 +11,7 @@ import { PresentationFooterGate } from "../motion/PresentationFooterGate";
 import { PresentationSlide } from "../motion/PresentationSlide";
 import { SceneCard } from "../motion/SceneCard";
 import { SiteFooter } from "../site-footer";
+import { resolveRoute } from "@/lib/site-config";
 
 interface LayoutProps {
   page: PageData;
@@ -44,7 +45,7 @@ const SplitLayoutBlock = ({
           >
             <DriftMedia intensity="medium" sequence="standard" className="h-full">
               <img
-                src={mediaSrc}
+                src={mediaSrc ? resolveRoute(mediaSrc) : mediaSrc}
                 alt=""
                 style={{
                   height: "100%",
@@ -79,9 +80,9 @@ const StandardLayoutBlock = ({
     >
       <SceneCard variant="section" sequence="standard">
         <div
-          className={`${textWrapperClass} ${
+          className={`${textWrapperClass} glass-panel ${
             hasBackground
-              ? "presentation-background-panel"
+              ? "presentation-background-panel glass-panel--dark"
               : "presentation-standard-panel"
           }`.trim()}
         >
